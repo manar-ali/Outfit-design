@@ -1,0 +1,2 @@
+# Outfit design
+ The idea of ​​the website is to help you coordinate your clothes, so all you need to do is choose the type and color of the piece of clothing that you are confused about coordinating (for example: a red shirt) and then press the search button, and the site will display a lot of pictures and suggestions to coordinate this red shirt in dozens of different ways and It shows you a group of tailors and their jobs, and allows you to communicate with them by chatting to agree with them to implement a design
