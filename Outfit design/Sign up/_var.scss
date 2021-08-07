@@ -1,0 +1,12 @@
+$light1:#D281B5;
+$light2:#D281B5;
+$light-moov:#D281B5;
+$dark-moov:#D281B5;
+
+$contW: 900px;
+$imgW: 260px;
+$formW: $contW - $imgW;
+$switchAT: 1.2s;
+$inputW: 260px;
+$btnH: 36px;
+$diffRatio: ($contW - $imgW) / $contW;

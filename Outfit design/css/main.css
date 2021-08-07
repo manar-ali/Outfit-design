@@ -1,0 +1,70 @@
+/*
+    Theme Name :5lsana b4yaka
+    Theme Coder : Nermen Nasser
+    FirstColor :#F9E5E4
+    SecondColor:#FFFFFF
+*/
+
+/*  Start Upper Bar */
+html {
+    scroll-behavior: smooth;
+  }
+.upper-bar
+{
+background-color:#F9E5E4 ;
+padding: 10;
+}
+/*  End Upper Bar */
+
+/*  Start Nav Bar */
+
+.navbar-nav.nav-link
+{
+    color:#D281B5
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color:#434B7C;
+   font-size: 20px;
+   font-weight: bold;
+}
+ .navbar-nav .active >.nav-link 
+{
+    color:#FF1392 !important;
+}
+/*  End Nav Bar */
+/* Start Slider */
+.slider
+{
+height:500px;
+}
+
+/* End Slider */
+
+
+
+/* rrrrrrrrrrrrrrrrr*/
+.reasonsCol .reasonsInfo {
+    display: flex;
+    align-items: center;
+}
+
+.reasonsCol .reasonsInfo p {
+    text-align: center;
+}
+
+.reasonsCol .reasonsInfo span {
+    font-size: 100px;
+    color: #d281b5;
+    opacity: .3;
+    font-family: conv_proximanova-regular;
+    line-height: 1;
+}
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#ce5897;
+    color:white;
+    text-align: center;
+  }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login/Registration</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+<div class="cont">
+
+  <form class="form sign-in" style="padding: 12%;" >
+    <h2>Welcome back</h2>
+    <label>
+      <span>Email</span>
+      <input type="text"/>
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="text"/>
+    </label>
+    <button type="submit" class="submit">Sign In</button>
+  </form>
+
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    </div>
+    <form class="form sign-up" style="padding: 4%;">
+      <h2>Time to feel like home,</h2>
+      <label>
+        <span>Name</span>
+        <input type="text" id="name" onchange="check()"/>
+        <div id="n" style="display: none;">
+          Name must be 3 or more characters
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="text" id="email" onchange="check()">
+        <div id="e" style="display: none;">
+          Email must include '@'
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+      </label>
+      <label>
+        <span>Phone</span>
+        <input type="text" id="phone" onchange="check()"/>
+        <div id="ph" style="display: none;">
+          Phone must be 11 numbers
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="text" id="pass" onchange="check()"/>
+        <div id="p" style="display: none;">
+          Password is a MUST
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+      </label>
+      <button type="button" class="submit" onclick="signUp()">Sign Up</button>
+    </form>
+  </div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

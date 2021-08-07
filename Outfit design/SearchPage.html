@@ -1,0 +1,351 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/main.css">  
+   <link rel="stylesheet" href="css/search.css">  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+  <title>search</title>
+
+</head>
+<body>
+    <!-- start supper bar-->
+<div class="upper-bar">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</div>
+<!-- End supper bar-->
+<!-- Start Nav Bar-->
+
+<!-- Start Nav Bar-->
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+        <img src="img/lady.png"style="height: 60px;">
+        <img src="img/logo.png"style="height:60px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="#"> Outfit design</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="../B4yaka/tailorsss/tailors_page.html">Dressmaker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#footer">Contact </a>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </div>
+  </nav>
+<!-- End Nav Bar-->
+  <!--End Nav Bar -->
+  
+   <!-- start supper bar-->
+   <div class="upper-bar">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</div>
+  <!-- section button-->
+  <div class="container  ">
+    <div class="row text-center">
+        <div class="col-4">
+              <button type="button" class="btn btn-primary btn-lg btn-block" onclick="showClassic(event)">classic </button>
+               </div>
+               <div class="col-4 ">
+               <button type="button" class="btn btn-primary btn-lg btn-block"onclick="showCasual(event)">casual </button>
+               </div>
+               <div class="col-4 ">
+                <button type="button" class="btn btn-primary btn-lg btn-block"onclick="showSoiree(event)">Soiree </button>
+                </div>
+         </div>
+     </div>
+  </div>
+  <div class="row text-center"  >
+          <div class="col-ms-2" style="margin-left:30px;">
+                <h3 class="text-center">color</h3>
+             <div class="row text-center">
+                      <div class="col-5" >
+                            <label class="container">Yellow
+                                <input type="radio" name="color"value="Yellow">
+                                <span class="checkmark"style=" background-color:yellow;"></span>
+                            </label>
+                            <label class="container">Orange 
+                                <input type="radio" name="color"value="Orange">
+                                <span class="checkmark" style=" background-color:orange;"></span>
+                            </label>
+                            <label class="container">Pink
+                                <input type="radio" name="color"value="Pink">
+                                <span class="checkmark"style=" background-color:pink;"></span>
+                                </label>
+                             <label class="container">Purple
+                                <input type="radio" name="color"value="Purple">
+                                <span class="checkmark"style=" background-color:purple;"></span>
+                             </label>
+                             <label class="container">red
+                                <input type="radio" name="color"value="red">
+                                <span class="checkmark"style=" background-color:red;"></span>
+                             </label>
+                             <label class="container">beige
+                                <input type="radio" name="color"value="beige">
+                                <span class="checkmark"style=" background-color:beige;"></span>
+                             </label>
+                       </div>
+                       <div class="col-5">
+                            <label class="container">Black
+                                <input type="radio" name="color"value="black">
+                                <span class="checkmark"style=" background-color:black;"></span>
+                             </label>
+                             <label class="container">blue
+                                <input type="radio" name="color"value="blue">
+                                <span class="checkmark"style=" background-color:blue;"></span>
+                             </label>
+                             <label class="container">Gray
+                                <input type="radio" name="color"value="gray">
+                                <span class="checkmark"style=" background-color:grey;"></span>
+                             </label>
+                             <label class="container">Green
+                                <input type="radio" name="color"value="Green">
+                                <span class="checkmark"style=" background-color:green;"></span>
+                             </label>
+                              <label class="container">white
+                                <input type="radio" name="color"value="white">
+                                <span class="checkmark"style=" background-color:white;"></span>
+                             </label>
+                             <label class="container">Brown
+                                <input type="radio" name="color"value="Brown">
+                                <span class="checkmark"style=" background-color:brown;"></span>
+                            </label>
+                        </div>
+                 </div>
+             <hr>
+<div clas="row">
+   
+    <label class="container">blazer
+        <input type="radio" name="gender" value="blazer"> 
+        <span class="checkmark"style=" background-color:light;"></span>
+    </label>
+    <label class="container">blouse
+        <input type="radio" name="gender" value="blouse"> 
+        <span class="checkmark"style=" background-color:light;"></span>
+    </label>
+    <label class="container">jumbsuit
+        <input type="radio" name="gender" value="jumbsuit"> 
+        <span class="checkmark"style=" background-color:light;"></span>
+    </label>
+    <label class="container">jacket
+        <input type="radio" name="gender" value="jacket"> 
+        <span class="checkmark"style=" background-color:light;"></span>
+    </label>
+    <label class="container">dress
+        <input type="radio" name="gender" value="dresses"> 
+        <span class="checkmark"style=" background-color:light;"></span>
+    </label>
+    <label class="container">pants
+        <input type="radio" name="gender" value="pants"> 
+        <span class="checkmark"style=" background-color:light;"></span>
+    </label>
+    <label class="container">skirt
+        <input type="radio" name="gender" value="skirt"> 
+        <span class="checkmark"style=" background-color:light;"></span>
+    </label>
+    <button type="button" class="btn btn-primary btn-lg btn-block"id="btn"> search</button>
+    <hr>
+</div>
+  </div>
+        <div class="col-9">
+            <div id=mybody>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--************************************footer****************************************************-->
+<div class="footer">
+    <div class="container" id="footer">
+       
+
+          <a href="#">
+            <i class="fa fa-facebook-square" style="font-size:36px;color:#FFF"></i></a>
+          <a href="#">
+            <i class="fa fa-twitter-square" style="font-size:36px;color:#FFF"></i>
+          </a>
+         <!--insta-->
+        <a href="#">
+        <i class="fa fa-instagram" style="font-size:36px;color:#FFF"></i>
+        </a>
+        <a href="#">
+        <i class="fa fa-whatsapp" style="font-size:36px;color:#FFF;"></i>
+        </a>
+            <h4>© Copyright 2021 To ITI</h4> 
+            
+
+     
+
+    </div>
+
+</div>
+
+<!--****************************End footer********************-->
+  <!--firebase-->
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+    apiKey: "AIzaSyBsa9wIV-hE55iYyfQAKqBtU8IS9YYMC2M",
+    authDomain: "lsana-b4yaka.firebaseapp.com",
+    projectId: "lsana-b4yaka",
+    storageBucket: "lsana-b4yaka.appspot.com",
+    messagingSenderId: "987239823697",
+    appId: "1:987239823697:web:beaa9e0d8917e234453b70",
+    measurementId: "G-55JVF4DN9C"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  var db=firebase.firestore();
+    /// when update data atuo
+    
+  
+     //
+     function showClassic(e){
+      $("#mybody").empty();
+  db.collection("new").get()
+  .then(function (data) {
+          for(const key in data.docs){
+            if(data.docs[key].data().style=="classic")
+          {
+        {
+            var div=`<div>
+              <img src=${data.docs[key].data().location}></img>
+              </div>`;
+             $("#mybody").append(div);
+        }
+    }
+     
+    }
+  })
+
+}
+   ///click on btn casual
+   
+  function showCasual(e){
+      $("#mybody").empty();
+  db.collection("new").get()
+  .then(function (data) {
+          for(const key in data.docs){
+            if(data.docs[key].data().style=="casual"){
+        {
+            var div=`<div>
+              <img src=${data.docs[key].data().location}></img>
+              </div>`;
+             $("#mybody").append(div);
+        }
+    }
+     
+    }
+  })
+
+}
+   ///click on btn Soiree
+   function showSoiree(e){
+      $("#mybody").empty();
+  db.collection("new").get()
+  .then(function (data) {
+      for(const key in data.docs){
+          if(data.docs[key].data().style=="soiree"){
+            var div=`<div>
+              <img src=${data.docs[key].data().location}></img>
+              </div>`;
+       $("#mybody").append(div);
+          }
+      } 
+  })
+  
+  }
+
+///****************************************************************************  
+
+const btn = document.querySelector('#btn');
+btn.onclick = function () {
+            const rbs = document.querySelectorAll('input[name="gender"]');
+            var selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+            const colorch = document.querySelectorAll('input[name="color"]');
+           var selectedValuecolor;
+            for (const coloritem of colorch) {
+                if (coloritem.checked) {
+                    selectedValuecolor = coloritem.value;
+                    break;
+                }
+            }
+        
+            $("#mybody").empty();
+  db.collection("new").get()
+  .then(function (data) {
+      for(const key in data.docs){
+          if(data.docs[key].data().color==selectedValuecolor && data.docs[key].data().type==selectedValue){
+            var div=`<div>
+              <img src=${data.docs[key].data().location}></img>
+              </div>`;
+       $("#mybody").append(div);
+          }
+    
+          if(data.docs[key].data().topcolor==selectedValuecolor && data.docs[key].data().toptype==selectedValue){
+            var div=`<div>
+              <img src=${data.docs[key].data().location}></img>
+              </div>`;
+       $("#mybody").append(div);
+
+            }
+            if(data.docs[key].data().bottomcolor==selectedValuecolor && data.docs[key].data().bottomtype==selectedValue){
+            var div=`<div>
+              <img src=${data.docs[key].data().location}></img>
+              </div>`;
+       $("#mybody").append(div);
+
+            }
+        }
+  })
+        };
+  </script>
+  </body>
+  </html>
